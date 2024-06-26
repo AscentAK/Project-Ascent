@@ -1,7 +1,8 @@
 import {
   renderForm,
   teamOne,
-  teamTwo
+  teamTwo,
+  battle
 } from './render-battlePlan'
 
 import {
@@ -70,7 +71,16 @@ export async function battlePage(teamSection) {
   })
 }
 
+export function battleResults(battleSec) {
+  const fight = document.getElementById('fight');
+  fight.addEventListener('click', () => {
 
+    const result = battle();
+
+    const winnerResult = document.getElementById('WINNER-result')
+    winnerResult.textContent = result
+  });
+}
 
 // export const handleSubmit = (e) => {
 //   e.preventDefault();
