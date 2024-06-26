@@ -1,7 +1,6 @@
 import {
   renderForm,
   teamOne,
-  teamTwo
 } from './render-battlePlan'
 
 import {
@@ -52,6 +51,8 @@ export async function battlePage(teamSection) {
 
     const form = e.target
     const formValues = Object.fromEntries(new FormData(form))
+
+    document.querySelector('#defenders').textContent = 'Defenders!'
 
     const span = document.getElementById("results-agent")
     const span2 = document.getElementById("results-agent2")
