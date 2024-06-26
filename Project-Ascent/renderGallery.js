@@ -32,7 +32,6 @@ export const renderAgents = (agents) => {
   })
 }
 
-renderAgents(getAgents())
 
 
 

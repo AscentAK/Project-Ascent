@@ -17,16 +17,13 @@ export const getAgents = async () => {
         description: ability.description
       }));
 
-      const agents = {
+      return {
         Name: agent.displayName,
         PictureUrl: `https://media.valorant-api.com/agents/${agent.uuid}/fullportrait.png`,
         Role: agent.role ? agent.role.displayName : null,
         Abilities: abilities
       };
-
-      return agents
     });
-
 
   } catch (error) {
     console.warn(error.message);
