@@ -6,7 +6,6 @@ import { battlePage } from './app';
 // app(appDiv);
 
 const agentDiv = document.querySelector('#agents');
-console.log(agentDiv)
 galleryPage(agentDiv)
 
 const teamSection = document.querySelector('#team')

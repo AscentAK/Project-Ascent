@@ -23,6 +23,7 @@ export const getAgents = async () => {
       return {
         name: agent.displayName,
         pictureUrl: `https://media.valorant-api.com/agents/${agent.uuid}/fullportrait.png`,
+        icon: `https://media.valorant-api.com/agents/${agent.uuid}/displayicon.png`,
         role: agent.role ? agent.role.displayName : null,
         abilities: abilities
       };

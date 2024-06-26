@@ -1,5 +1,3 @@
-import { getAgents } from "./gallery";
-
 export const renderAgents = (agentListEl, agents) => {
   agentListEl.innerHTML = '';
 
