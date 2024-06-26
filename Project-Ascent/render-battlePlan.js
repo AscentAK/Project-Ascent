@@ -47,8 +47,10 @@ export const renderForm = (teamSection, agents) => {
 
   teamSection.append(h2)
 
+
+
   for (let i = 0; i < 5; i++) {
-    const select = createSelectButton();
+    const select = createSelectButton(i + 1);
     createOptions(select, agents)
     teamSection.append(select)
   }
@@ -68,13 +70,7 @@ export const renderForm = (teamSection, agents) => {
 };
 
 
-export const teamOne = () => {
-
-  const container = document.querySelector('#your-team')
-
-  const h2 = document.createElement('h2')
-  h2.id = 'results-heading'
-  h2.textContent = 'Defenders'
+export const teamOne = (teamSelection) => {
 
   const p = document.createElement('p')
   const p2 = document.createElement('p')
@@ -86,16 +82,16 @@ export const teamOne = () => {
   span.id = 'results-agent'
 
   const span2 = document.createElement('span')
-  span.id = 'results-agent2'
+  span2.id = 'results-agent2'
 
   const span3 = document.createElement('span')
-  span.id = 'results-agent3'
+  span3.id = 'results-agent3'
 
   const span4 = document.createElement('span')
-  span.id = 'results-agent4'
+  span4.id = 'results-agent4'
 
   const span5 = document.createElement('span')
-  span.id = 'results-agent5'
+  span5.id = 'results-agent5'
 
 
   p.appendChild(span)
@@ -105,7 +101,7 @@ export const teamOne = () => {
   p5.appendChild(span5)
 
 
-  container.append(h2, p, p2, p3, p4, p5)
+  teamSelection.append(p, p2, p3, p4, p5)
 };
 
 export const teamTwo = () => {

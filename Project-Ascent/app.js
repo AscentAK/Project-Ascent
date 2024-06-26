@@ -28,16 +28,22 @@ export default async function galleryPage(agentDiv) {
 
 }
 
+export async function formResult(team1) {
+  const formDiv = document.getElementById("your-team");
+  formDiv.append(team1);
+}
+
 export async function battlePage(teamSection) {
   const formBattle = document.createElement('form')
   formBattle.id = 'battle-form'
   teamSection.append(formBattle)
 
+  teamOne(teamSection);
+
   const agents = await getAgents();
   console.log(agents)
 
   renderForm(formBattle, agents)
-
 
 
   formBattle.addEventListener('submit', async (e) => {
@@ -53,16 +59,18 @@ export async function battlePage(teamSection) {
     const span4 = document.getElementById("results-agent4")
     const span5 = document.getElementById("results-agent5")
 
-    span.textContent = formValues['agent-1']
-    span2.textContent = formValues['agent-2']
-    span3.textContent = formValues['agent-3']
-    span4.textContent = formValues['agent-4']
-    span5.textContent = formValues['agent-5']
+    span.textContent = formValues['agents-1']
+    span2.textContent = formValues['agents-2']
+    span3.textContent = formValues['agents-3']
+    span4.textContent = formValues['agents-4']
+    span5.textContent = formValues['agents-5']
 
     form.reset();
 
   })
 }
+
+
 
 // export const handleSubmit = (e) => {
 //   e.preventDefault();
