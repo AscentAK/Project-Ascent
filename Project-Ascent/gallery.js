@@ -17,11 +17,14 @@ export const getAgents = async () => {
         description: ability.description
       }));
 
+      // create an array, to be just displayName and description
+      // add the array into the abilities
+
       return {
-        Name: agent.displayName,
-        PictureUrl: `https://media.valorant-api.com/agents/${agent.uuid}/fullportrait.png`,
-        Role: agent.role ? agent.role.displayName : null,
-        Abilities: abilities
+        name: agent.displayName,
+        pictureUrl: `https://media.valorant-api.com/agents/${agent.uuid}/fullportrait.png`,
+        role: agent.role ? agent.role.displayName : null,
+        abilities: abilities
       };
     });
 
