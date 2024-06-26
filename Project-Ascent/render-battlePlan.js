@@ -55,22 +55,23 @@ export const renderForm = (teamSection, agents) => {
     teamSection.append(select)
   }
 
-
-
   const button = document.createElement('button')
-  const random = document.createElement('button')
+
 
   button.setAttribute('type', 'submit')
-  random.setAttribute('type', 'submit')
+
 
   button.textContent = 'Button'
-  random.textContent = 'random'
 
-  teamSection.append(button, random)
+
+  teamSection.append(button)
 };
 
 
 export const teamOne = (teamSelection) => {
+
+  const h2 = document.createElement('h2')
+  h2.id = 'defenders'
 
   const p = document.createElement('p')
   const p2 = document.createElement('p')
@@ -101,16 +102,10 @@ export const teamOne = (teamSelection) => {
   p5.appendChild(span5)
 
 
-  teamSelection.append(p, p2, p3, p4, p5)
+  teamSelection.append(h2, p, p2, p3, p4, p5)
 };
 
-export const teamTwo = () => {
-
-  const container = document.querySelector('#enemy-team')
-
-  const h2 = document.createElement('h2')
-  h2.id = 'results-heading-enemy'
-  h2.textContent = 'Attackers'
+export const teamTwo = (teamSelection) => {
 
   const p = document.createElement('p')
   const p2 = document.createElement('p')
@@ -141,7 +136,7 @@ export const teamTwo = () => {
   p5.appendChild(span5)
 
 
-  container.append(h2, p, p2, p3, p4, p5)
+  teamSelection.append(h2, p, p2, p3, p4, p5)
 };
 
 export const battle = () => {
