@@ -1,6 +1,5 @@
 import {
   renderForm,
-  renderFormEnemy,
   teamOne,
   teamTwo
 } from './render-battlePlan'
@@ -18,6 +17,8 @@ export default async function galleryPage(agentDiv) {
   agentDiv.append(agentListEl);
 
 
+
+
   // Fetch the agents!
   const agents = await getAgents();
   console.log(agents);
@@ -26,3 +27,63 @@ export default async function galleryPage(agentDiv) {
   renderAgents(agentListEl, agents)
 
 }
+
+export async function battlePage(teamSection) {
+  const formBattle = document.createElement('form')
+  formBattle.id = 'battle-form'
+  teamSection.append(formBattle)
+
+  const agents = await getAgents();
+  console.log(agents)
+
+  renderForm(formBattle, agents)
+
+
+
+  formBattle.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    // const container = document.querySelector('#your-team')
+
+    const form = e.target
+    const formValues = Object.fromEntries(new FormData(form))
+
+    const span = document.getElementById("results-agent")
+    const span2 = document.getElementById("results-agent2")
+    const span3 = document.getElementById("results-agent3")
+    const span4 = document.getElementById("results-agent4")
+    const span5 = document.getElementById("results-agent5")
+
+    span.textContent = formValues['agent-1']
+    span2.textContent = formValues['agent-2']
+    span3.textContent = formValues['agent-3']
+    span4.textContent = formValues['agent-4']
+    span5.textContent = formValues['agent-5']
+
+    form.reset();
+
+  })
+}
+
+// export const handleSubmit = (e) => {
+//   e.preventDefault();
+//   // const container = document.querySelector('#your-team')
+
+//   const form = e.target
+//   const formValues = Object.fromEntries(new FormData(form))
+
+//   const span = document.getElementById("results-agent")
+//   const span2 = document.getElementById("results-agent2")
+//   const span3 = document.getElementById("results-agent3")
+//   const span4 = document.getElementById("results-agent4")
+//   const span5 = document.getElementById("results-agent5")
+
+//   span.textContent = formValues.agent
+//   span2.textContent = formValues.agent
+//   span3.textContent = formValues.agent
+//   span4.textContent = formValues.agent
+//   span5.textContent = formValues.agent
+
+//   form.reset();
+// }
+
+// document.querySelector('#your-team').addEventListener('submit')
