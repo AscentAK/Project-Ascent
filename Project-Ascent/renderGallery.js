@@ -1,8 +1,7 @@
 import { getAgents } from "./gallery";
 
-export const renderAgents = (agents) => {
-  const ulList = document.getElementById('Agent-list');
-  ulList.innerHTML = '';
+export const renderAgents = (agentListEl, agents) => {
+  agentListEl.innerHTML = '';
 
   agents.forEach((agent) => {
     const li = document.createElement('li');
@@ -21,14 +20,13 @@ export const renderAgents = (agents) => {
     // const agentAbility4 = document.createElement('p');
     // const agent4Des = document.createElement('p');
 
-    // const button = document.createElement('button');
 
     h2.textContent = agent.Name;
 
     agentImg.src = agent.PictureUrl;
 
     li.append(h2, agentImg)
-    ulList.append(li)
+    agentListEl.append(li)
   })
 }
 
