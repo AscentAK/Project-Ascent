@@ -5,27 +5,30 @@ export const renderAgents = (agentListEl, agents) => {
 
   agents.forEach((agent) => {
     const li = document.createElement('li');
-    const h2 = document.createElement('h2');
-
+    const h1 = document.createElement('h1');
+    const agentRole = document.createElement('h2');;
     const agentImg = document.createElement('img');
-    // const agentAbility1 = document.createElement('p');
-    // const agent1Des = document.createElement('p');
+    const ulAbilities = document.createElement('ul');
 
-    // const agentAbility2 = document.createElement('p');
-    // const agent2Des = document.createElement('p');
+    h1.textContent = agent.name;
+    agentRole.textContent = `Role: ${agent.role}!`
+    agentImg.src = agent.pictureUrl;
 
-    // const agentAbility3 = document.createElement('p');
-    // const agent3Des = document.createElement('p');
+    agent.abilities.forEach((ability) => {
+      const liAbility = document.createElement('li');
+      const pAbilityName = document.createElement('p');
+      const pAbilityDescription = document.createElement('p');
 
-    // const agentAbility4 = document.createElement('p');
-    // const agent4Des = document.createElement('p');
+      pAbilityName.textContent = ability.abilityName;
+      pAbilityDescription.textContent = ability.description;
 
+      liAbility.append(pAbilityName, pAbilityDescription);
+      ulAbilities.append(liAbility);
+    });
 
-    h2.textContent = agent.Name;
+    // agentAbility1.textContent = agent.abilities[0].description
 
-    agentImg.src = agent.PictureUrl;
-
-    li.append(h2, agentImg)
+    li.append(h1, agentRole, agentImg, ulAbilities,)
     agentListEl.append(li)
   })
 }
