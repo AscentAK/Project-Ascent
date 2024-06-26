@@ -22,8 +22,9 @@ random <button>
 
 --> key: placeholder name --> (*)
 */
-const createSelectButton = () => {
-  const select = document.createElement('select').setAttribute('id', 'agent')
+const createSelectButton = (index) => {
+  const select = document.createElement('select')
+  select.setAttribute('name', `agents-${index}`)
   return select
 }
 
@@ -31,22 +32,28 @@ const createOptions = (select, agents) => {
 
   for (let i = 0; i < agents.length; i++) {
     const option = document.createElement('option')
-    option.setAttribute('value', `${agents[i].name}`)
-    option.textContent = agents[i].name
+    option.setAttribute('value', `${agents[i].Name}`)
+    option.textContent = agents[i].Name
     select.append(option)
   }
 
 }
 
-export const renderForm = (agents) => {
+export const renderForm = (teamSection, agents) => {
 
-  const battle = document.querySelector('#battle-form')
+  const h2 = document.createElement('h2');
+  h2.id = 'formHeading'
+  h2.textContent = "Form your team!"
+
+  teamSection.append(h2)
 
   for (let i = 0; i < 5; i++) {
     const select = createSelectButton();
     createOptions(select, agents)
-    battle.append(select)
+    teamSection.append(select)
   }
+
+
 
   const button = document.createElement('button')
   const random = document.createElement('button')
@@ -54,28 +61,12 @@ export const renderForm = (agents) => {
   button.setAttribute('type', 'submit')
   random.setAttribute('type', 'submit')
 
-  battle.append(button, random)
+  button.textContent = 'Button'
+  random.textContent = 'random'
+
+  teamSection.append(button, random)
 };
 
-export const renderFormEnemy = (agents) => {
-
-  const battle = document.querySelector('#battle-form-enemy')
-
-  for (let i = 0; i < 5; i++) {
-    const select = createSelectButton();
-    createOptions(select, agents)
-    battle.append(select)
-  }
-
-  const button = document.createElement('button')
-  const random = document.createElement('button')
-
-  button.setAttribute('type', 'submit')
-  random.setAttribute('type', 'submit')
-
-  battle.append(button, random)
-
-};
 
 export const teamOne = () => {
 
