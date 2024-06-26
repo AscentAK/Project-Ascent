@@ -1,6 +1,7 @@
 import './style.css';
 import galleryPage, { formResult } from './app'
 import { battlePage } from './app';
+import { battleResults } from './app';
 
 // const appDiv = document.querySelector('#app');
 // app(appDiv);
@@ -8,12 +9,14 @@ import { battlePage } from './app';
 const agentDiv = document.querySelector('#agents');
 galleryPage(agentDiv)
 
-const team1 = document.querySelector('#results')
+const team1 = document.querySelector('#form-results')
 formResult(team1)
 
 const teamSection = document.querySelector('#team')
 battlePage(teamSection)
 
+const battleSec = document.querySelector('#battle-results');
+battleResults(battleSec)
 
 
 

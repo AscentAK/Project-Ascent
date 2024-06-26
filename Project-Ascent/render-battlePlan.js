@@ -144,3 +144,9 @@ export const teamTwo = () => {
   container.append(h2, p, p2, p3, p4, p5)
 };
 
+export const battle = () => {
+  const arr = ['Defenders', 'Attackers'];
+  const randomElement = arr[Math.floor(Math.random() * arr.length)];
+
+  return randomElement
+}
