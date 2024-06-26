@@ -32,8 +32,8 @@ const createOptions = (select, agents) => {
 
   for (let i = 0; i < agents.length; i++) {
     const option = document.createElement('option')
-    option.setAttribute('value', `${agents[i].Name}`)
-    option.textContent = agents[i].Name
+    option.setAttribute('value', `${agents[i].name}`)
+    option.textContent = agents[i].name
     select.append(option)
   }
 
