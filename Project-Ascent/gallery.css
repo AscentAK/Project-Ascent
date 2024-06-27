@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(15, 25, 35);
+}
+
+nav {
+  color: rgb(236, 232, 225);
+  position: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(236, 232, 225);
+  font-size: 18px;
+  padding: 3px;
+}
+
+h1 {
+  align-self: center;
+  text-decoration: underline;
+  color: rgb(236, 232, 225);
+}
+
+h2 {
+  align-self: center;
+  color: rgb(236, 232, 225);
+  height: fit-content;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+}
+
+li {
+  border: 2px solid rgb(236, 232, 225);
+  list-style-type: none;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: flex-start;
+}
+
+
+img {
+  height: 25rem;
+}
+
+#Gekko {
+  background-color: rgb(236, 232, 225);
+  background-image: url('backgroundImg/Gekko-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Fade {
+  background-color: rgb(236, 232, 225);
+  background-image: url('backgroundImg/fade-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Breach {
+  background-color: rgb(236, 232, 225);
+  background-image: url('backgroundImg/Breach-background.png');
+  background-repeat: no-repeat;
+  background-size: 25rem;
+  background-position: center;
+}
+
+#Deadlock {
+  background-color: rgb(236, 232, 225);
+  background-image: url('backgroundImg/Deadlock-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Raze {
+  background-color: gray;
+  background-image: url('backgroundImg/Raze-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Chamber {
+  background-color: gray;
+  background-image: url('backgroundImg/Chamber-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#KAY\/O {
+  background-color: gray;
+  background-image: url('backgroundImg/KayO-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Skye {
+  background-color: gray;
+  background-image: url('backgroundImg/Skye-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Cypher {
+  background-color: gray;
+  background-image: url('backgroundImg/Cypher-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Sova {
+  background-color: gray;
+  background-image: url('backgroundImg/Sova-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Killjoy {
+  background-color: gray;
+  background-image: url('backgroundImg/Killjoy-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Harbor {
+  background-color: gray;
+  background-image: url('backgroundImg/Harbor-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Viper {
+  background-color: gray;
+  background-image: url('backgroundImg/Viper-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Phoenix {
+  background-color: gray;
+  background-image: url('backgroundImg/Phoenix-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Astra {
+  background-color: gray;
+  background-image: url('backgroundImg/Astra-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Brimstone {
+  background-color: gray;
+  background-image: url('backgroundImg/Brimstone-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Iso {
+  background-color: gray;
+  background-image: url('backgroundImg/Iso-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Clove {
+  background-color: gray;
+  background-image: url('backgroundImg/Clove-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Neon {
+  background-color: gray;
+  background-image: url('backgroundImg/Neon-background.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Yoru {
+  background-color: gray;
+  background-image: url('backgroundImg/Sage.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Sage {
+  background-color: gray;
+  background-image: url('backgroundImg/Yoru.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Reyna {
+  background-color: gray;
+  background-image: url('backgroundImg/Reyna.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Omen {
+  background-color: gray;
+  background-image: url('backgroundImg/Omen.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Jett {
+  background-color: gray;
+  background-image: url('backgroundImg/Jett.png');
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+p {
+  align-self: center;
+  color: rgb(236, 232, 225);
+  font-size: small;
+}
