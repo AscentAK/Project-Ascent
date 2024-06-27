@@ -1,4 +1,3 @@
-import './style.css';
 import { galleryPage, formResult, battlePage, battleResults } from './app.js'
 
 // const appDiv = document.querySelector('#app');
