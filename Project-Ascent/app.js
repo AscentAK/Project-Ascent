@@ -39,7 +39,7 @@ export async function battlePage(teamSection) {
   formBattle.id = 'battle-form'
   teamSection.append(formBattle)
 
-  teamOne(teamSection);
+  teamOne(document.querySelector('#your-team'));
 
   const agents = await getAgents();
   console.log(agents)
@@ -71,6 +71,39 @@ export async function battlePage(teamSection) {
     form.reset();
 
   })
+  document.getElementById('random-button').addEventListener('click', async () => {
+
+    const selectElements = formBattle.querySelectorAll('option');
+    const selectedAgents = [];
+
+    selectElements.forEach(select => {
+      if (select.value) {
+        selectedAgents.push(select.value);
+      }
+    });
+
+    const randomAgents = getRandomAgentsFromSelection(selectedAgents, 5);
+    console.log(randomAgents)
+
+    // Ensure the enemy team section is cleared before populating it
+    const enemyTeamSection = document.querySelector('#enemy-team');
+    enemyTeamSection.innerHTML = '';
+
+    // Create and append result spans for the enemy team
+    teamTwo(enemyTeamSection);
+    document.getElementById('attackers').textContent = 'Attackers!'
+
+    document.getElementById('results-agent-enemy').textContent = randomAgents[0];
+    document.getElementById('results-agent2-enemy').textContent = randomAgents[1];
+    document.getElementById('results-agent3-enemy').textContent = randomAgents[2];
+    document.getElementById('results-agent4-enemy').textContent = randomAgents[3];
+    document.getElementById('results-agent5-enemy').textContent = randomAgents[4];
+  });
+}
+
+const getRandomAgentsFromSelection = (agents, count) => {
+  const shuffled = agents.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
 }
 
 export function battleResults(battleSec) {

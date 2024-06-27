@@ -47,24 +47,23 @@ export const renderForm = (teamSection, agents) => {
 
   teamSection.append(h2)
 
-
-
   for (let i = 0; i < 5; i++) {
     const select = createSelectButton(i + 1);
     createOptions(select, agents)
     teamSection.append(select)
   }
 
+  const randomButton = document.createElement('button');
+  randomButton.setAttribute('type', 'button');
+  randomButton.id = 'random-button';
+  randomButton.textContent = 'Random';
+
   const button = document.createElement('button')
-
-
   button.setAttribute('type', 'submit')
-
-
   button.textContent = 'Button'
 
 
-  teamSection.append(button)
+  teamSection.append(button, randomButton)
 };
 
 
@@ -107,6 +106,9 @@ export const teamOne = (teamSelection) => {
 
 export const teamTwo = (teamSelection) => {
 
+  const h2 = document.createElement('h2')
+  h2.id = 'attackers'
+
   const p = document.createElement('p')
   const p2 = document.createElement('p')
   const p3 = document.createElement('p')
@@ -114,19 +116,19 @@ export const teamTwo = (teamSelection) => {
   const p5 = document.createElement('p')
 
   const span = document.createElement('span')
-  span.id = 'results-agent'
+  span.id = 'results-agent-enemy'
 
   const span2 = document.createElement('span')
-  span.id = 'results-agent2'
+  span2.id = 'results-agent2-enemy'
 
   const span3 = document.createElement('span')
-  span.id = 'results-agent3'
+  span3.id = 'results-agent3-enemy'
 
   const span4 = document.createElement('span')
-  span.id = 'results-agent4'
+  span4.id = 'results-agent4-enemy'
 
   const span5 = document.createElement('span')
-  span.id = 'results-agent5'
+  span5.id = 'results-agent5-enemy'
 
 
   p.appendChild(span)
