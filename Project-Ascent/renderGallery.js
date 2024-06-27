@@ -6,10 +6,15 @@ export const renderAgents = (agentListEl, agents) => {
     const h1 = document.createElement('h1');
     const agentRole = document.createElement('h2');;
     const agentImg = document.createElement('img');
+    const title = document.createElement('h2')
     const ulAbilities = document.createElement('ul');
+    const abilityDiv = document.createElement('div');
 
     h1.textContent = agent.name;
+    title.id = 'intro';
+    title.textContent = 'Abilities!';
     agentRole.textContent = `Role: ${agent.role}!`
+    agentImg.id = `${agent.name}`
     agentImg.src = agent.pictureUrl;
 
     agent.abilities.forEach((ability) => {
@@ -21,12 +26,13 @@ export const renderAgents = (agentListEl, agents) => {
       pAbilityDescription.textContent = ability.description;
 
       liAbility.append(pAbilityName, pAbilityDescription);
-      ulAbilities.append(liAbility);
+      abilityDiv.append(liAbility);
+      ulAbilities.append(abilityDiv)
     });
 
     // agentAbility1.textContent = agent.abilities[0].description
 
-    li.append(h1, agentRole, agentImg, ulAbilities,)
+    li.append(h1, agentRole, agentImg, title, ulAbilities,)
     agentListEl.append(li)
   })
 }
