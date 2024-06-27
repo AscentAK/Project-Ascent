@@ -56,11 +56,12 @@ export const renderForm = (teamSection, agents) => {
   const randomButton = document.createElement('button');
   randomButton.setAttribute('type', 'button');
   randomButton.id = 'random-button';
-  randomButton.textContent = 'Random';
+  randomButton.textContent = 'Random Enemy Team';
 
   const button = document.createElement('button')
+  button.id = "form-button"
   button.setAttribute('type', 'submit')
-  button.textContent = 'Button'
+  button.textContent = 'Submit'
 
 
   teamSection.append(button, randomButton)
@@ -69,7 +70,7 @@ export const renderForm = (teamSection, agents) => {
 
 export const teamOne = (teamSelection) => {
 
-  const h2 = document.createElement('h2')
+  const h2 = document.createElement('h3')
   h2.id = 'defenders'
 
   const p = document.createElement('p')
@@ -106,7 +107,7 @@ export const teamOne = (teamSelection) => {
 
 export const teamTwo = (teamSelection) => {
 
-  const h2 = document.createElement('h2')
+  const h2 = document.createElement('h3')
   h2.id = 'attackers'
 
   const p = document.createElement('p')
