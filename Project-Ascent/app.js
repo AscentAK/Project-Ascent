@@ -7,11 +7,11 @@ import {
 
 import {
   getAgents
-} from './gallery'
+} from './gallery.js'
 
 import {
   renderAgents
-} from './renderGallery'
+} from './renderGallery.js'
 
 export default async function galleryPage(agentDiv) {
   const agentListEl = document.getElementById('agent-list');
