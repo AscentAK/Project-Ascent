@@ -3,24 +3,38 @@
 
 <head>
   <meta charset="UTF-8">
-
+  <link rel="stylesheet" href="battle-style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 
 <body>
-  <nav>
-    <ul class="nav-list">
-      <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="gallery.html">Player Gallery</a>
-      </li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <ul class="nav-list">
+        <li>
+          <a id="home" href="index.html">Home</a>
+        </li>
+        <li>
+          <a id="gallery" href="gallery.html">Player Gallery</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div id="planBattle">
+    <div id="video">
+      <video autoplay loop muted plays-inline class="background-clip">
+        <source src="clips-videos/valCilp - Made with Clipchamp.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div id="heading-plan-battle">
+      <h2>Plan / Battle</h2>
+    </div>
+
+  </div>
+
   <section id="team">
-    <h2>Plan & Battle!</h2>
+
 
     <!-- <form id="battle-form">
       <title>Defenders</title>
@@ -42,8 +56,9 @@
     </section>
   </div>
   <div id="battle-results">
+
     <button type="submit" id="fight">FIGHT!</button>
-    <h2 id="Winner">WINNER!</h2>
+    <h2 id="winner">WINNER!</h2>
     <p id="WINNER-result"></p>
   </div>
 </body>
