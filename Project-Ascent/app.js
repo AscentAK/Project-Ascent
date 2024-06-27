@@ -3,17 +3,17 @@ import {
   teamOne,
   teamTwo,
   battle
-} from './render-battlePlan'
+} from './render-battlePlan.js'
 
 import {
   getAgents
-} from './gallery'
+} from './gallery.js'
 
 import {
   renderAgents
-} from './renderGallery'
+} from './renderGallery.js'
 
-export default async function galleryPage(agentDiv) {
+async function galleryPage(agentDiv) {
   const agentListEl = document.getElementById('agent-list');
   agentDiv.append(agentListEl);
 
@@ -29,12 +29,12 @@ export default async function galleryPage(agentDiv) {
 
 }
 
-export async function formResult(team1) {
+async function formResult(team1) {
   const formDiv = document.getElementById("your-team");
   formDiv.append(team1);
 }
 
-export async function battlePage(teamSection) {
+async function battlePage(teamSection) {
   const formBattle = document.createElement('form')
   formBattle.id = 'battle-form'
   teamSection.append(formBattle)
@@ -106,7 +106,7 @@ const getRandomAgentsFromSelection = (agents, count) => {
   return shuffled.slice(0, count);
 }
 
-export function battleResults(battleSec) {
+function battleResults(battleSec) {
   const fight = document.getElementById('fight');
   fight.addEventListener('click', () => {
 
@@ -140,3 +140,5 @@ export function battleResults(battleSec) {
 // }
 
 // document.querySelector('#your-team').addEventListener('submit')
+
+export { galleryPage, formResult, battlePage, battleResults }

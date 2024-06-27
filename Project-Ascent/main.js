@@ -1,7 +1,4 @@
-import './style.css';
-import galleryPage, { formResult } from './app'
-import { battlePage } from './app';
-import { battleResults } from './app';
+import { galleryPage, formResult, battlePage, battleResults } from './app.js'
 
 // const appDiv = document.querySelector('#app');
 // app(appDiv);
@@ -17,8 +14,6 @@ battlePage(teamSection)
 
 const battleSec = document.querySelector('#battle-results');
 battleResults(battleSec)
-
-
 
 
 
