@@ -3,7 +3,7 @@ import {
   teamOne,
   teamTwo,
   battle
-} from './render-battlePlan'
+} from './render-battlePlan.js'
 
 import {
   getAgents
