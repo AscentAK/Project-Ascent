@@ -43,7 +43,7 @@ export const renderForm = (teamSection, agents) => {
 
   const h2 = document.createElement('h2');
   h2.id = 'formHeading'
-  h2.textContent = "Form your team!"
+  h2.textContent = "Form Your Team"
 
   teamSection.append(h2)
 

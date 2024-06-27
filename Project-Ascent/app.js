@@ -54,7 +54,7 @@ export async function battlePage(teamSection) {
     const form = e.target
     const formValues = Object.fromEntries(new FormData(form))
 
-    document.querySelector('#defenders').textContent = 'Defenders!'
+    document.querySelector('#defenders').textContent = 'Defending'
 
     const span = document.getElementById("results-agent")
     const span2 = document.getElementById("results-agent2")
@@ -91,7 +91,7 @@ export async function battlePage(teamSection) {
 
     // Create and append result spans for the enemy team
     teamTwo(enemyTeamSection);
-    document.getElementById('attackers').textContent = 'Attackers!'
+    document.getElementById('attackers').textContent = 'Attacking'
 
     document.getElementById('results-agent-enemy').textContent = randomAgents[0];
     document.getElementById('results-agent2-enemy').textContent = randomAgents[1];

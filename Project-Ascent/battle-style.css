@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px;
+  margin: 0px 0px 11px 0px;
+  position: fixed;
+}
+
+#home,
+#gallery {
+  border-style: hidden;
+  color: white;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 10px;
+}
+
+#home {
+  padding-left: 20px;
+
+  font-family: monospace;
+}
+
+#gallery {
+  padding-right: 30px;
+  padding-left: 50px;
+  font-family: monospace;
+}
+
+.nav-list a {
+  text-decoration: none;
+}
+
+#planBattle {
+  height: 45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0px 5rem 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#planBattle h2 {
+  font-size: 40px;
+  color: white;
+  font-family: monospace;
+}
+
+.background-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 7rem 0px 0px 0px;
+}
+
+form h2 {
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+}
+
+#battle-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  margin: 20px 0px 40px 0px;
+  border: 0.1rem solid black;
+
+}
+
+#form-results {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#attackers,
+#defenders {
+  margin: 0px 0px 10px 0px;
+}
+
+#enemy-team,
+#your-team {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  margin: 5rem 10rem 0px 0xp;
+  align-items: center;
+}
+
+#enemy-team {
+  margin: 0px 7rem 0px 0px;
+}
+
+#your-team {
+  margin: 0px 0px 0px 7rem;
+}
+
+#battle-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fight {
+  margin-bottom: 20px;
+}
+
+#winner {
+  margin-bottom: 20px;
+}
+
+#WINNER-result {
+  margin-bottom: 2rem;
+}
+
+@media (min-aspect-ratio:16/9) {
+  .background-clip {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio:16/9) {
+  .background-clip {
+    width: auto;
+    height: 100%;
+  }
+}
