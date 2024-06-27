@@ -1,5 +1,5 @@
 import './style.css';
-import { galleryPage, formResult } from './app'
+import { galleryPage, formResult } from './app.js'
 import { battlePage } from './app';
 import { battleResults } from './app';
 
