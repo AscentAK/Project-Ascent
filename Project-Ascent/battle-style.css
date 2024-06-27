@@ -149,6 +149,8 @@ select:hover {
 #attackers,
 #defenders {
   margin: 0px 0px 10px 0px;
+  font-family: monospace;
+  font-size: 60px;
 }
 
 #enemy-team,
@@ -158,18 +160,26 @@ select:hover {
   padding: 50px;
   margin: 5rem 10rem 0px 0xp;
   align-items: center;
+  color: #d9d5cf;
 }
 
 #enemy-team {
+  display: flex;
   margin: 0px 7rem 0px 0px;
+  gap: 10px;
 }
 
 #your-team {
+  display: flex;
+  gap: 10px;
   margin: 0px 0px 0px 7rem;
 }
 
 span {
   padding: 0px 0px 10px 0px;
+  font-size: 30px;
+  color: white;
+  font-family: monospace;
 }
 
 
@@ -186,19 +196,23 @@ span {
   font-size: 30px;
   margin-bottom: 20px;
   font-family: monospace;
-  border-style: hidden;
+  border-style: solid;
   color: white;
-  background-color: transparent
+  background-color: transparent;
+  padding: 0px 5px 0px 5px;
+
 }
 
 #fight:hover {
   color: rgba(148, 17, 2, 255);
   cursor: pointer;
+
 }
 
 #winner {
   margin-bottom: 20px;
   font-family: monospace;
+  color: #d9d5cf;
 }
 
 #WINNER-result {

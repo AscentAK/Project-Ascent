@@ -56,7 +56,7 @@ export const renderForm = (teamSection, agents) => {
   const randomButton = document.createElement('button');
   randomButton.setAttribute('type', 'button');
   randomButton.id = 'random-button';
-  randomButton.textContent = 'Random';
+  randomButton.textContent = 'Random Enemy Team';
 
   const button = document.createElement('button')
   button.id = "form-button"
