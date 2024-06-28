@@ -18,6 +18,13 @@ header {
   color: white;
 }
 
+#home:hover,
+#gallery:hover {
+  color: rgba(148, 17, 2, 255);
+  cursor: pointer;
+  font-size: 15px;
+}
+
 .nav-list {
   display: flex;
   justify-content: space-around;
@@ -27,13 +34,11 @@ header {
 
 #home {
   padding-left: 20px;
-
   font-family: monospace;
 }
 
 #gallery {
-  padding-right: 30px;
-  padding-left: 50px;
+  margin: 50px;
   font-family: monospace;
 }
 

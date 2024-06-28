@@ -36,11 +36,11 @@ const createOptions = (select, agents) => {
     option.textContent = agents[i].name;
 
     const icon = document.createElement('img');
-    icon.src = agents[i].icon; // Assuming agents[i].icon contains the URL to the icon
+    icon.src = agents[i].icon;
     icon.id = `${agents[i].name}-icon`
-    icon.alt = `${agents[i].name} icon`; // Optional: Provide alt text for accessibility
+    icon.alt = `${agents[i].name} icon`;
 
-    // Append the <img> to the <option>
+
     option.appendChild(icon);
 
     option.addEventListener('click', () => updateSelectedIcon(icon));

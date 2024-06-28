@@ -60,12 +60,12 @@ async function battlePage(teamSection) {
       const span = document.getElementById(spanId);
       const agent = agents.find(a => a.name === agentName);
       if (agent) {
-        // Clear existing icon
+
         span.innerHTML = '';
 
         const nameSpan = document.createElement('span');
         nameSpan.textContent = agent.name;
-        nameSpan.style.marginRight = '5px';
+        nameSpan.style.marginRight = '10px';
         span.appendChild(nameSpan);
 
         const icon = document.createElement('img');
@@ -77,7 +77,7 @@ async function battlePage(teamSection) {
       }
     };
 
-    // Update spans with selected agents and their icons
+
     await displayAgentInfo('results-agent', formValues['agents-1']);
     await displayAgentInfo('results-agent2', formValues['agents-2']);
     await displayAgentInfo('results-agent3', formValues['agents-3']);
@@ -114,11 +114,11 @@ async function battlePage(teamSection) {
     const randomAgents = getRandomAgentsFromSelection(selectedAgents, 5);
     console.log(randomAgents)
 
-    // Ensure the enemy team section is cleared before populating it
+
     const enemyTeamSection = document.querySelector('#enemy-team');
     enemyTeamSection.innerHTML = '';
 
-    // Create and append result spans for the enemy team
+
     teamTwo(enemyTeamSection);
     document.getElementById('attackers').textContent = 'Attacking'
 
@@ -126,12 +126,12 @@ async function battlePage(teamSection) {
       const span = document.getElementById(spanId);
       const agent = agents.find(a => a.name === agentName);
       if (agent) {
-        // Clear existing content
+
         span.innerHTML = '';
 
         const nameSpan = document.createElement('span');
         nameSpan.textContent = agent.name;
-        nameSpan.style.marginRight = '5px';
+        nameSpan.style.marginRight = '10px';
         span.appendChild(nameSpan);
 
         const icon = document.createElement('img');
@@ -143,7 +143,7 @@ async function battlePage(teamSection) {
       }
     };
 
-    // Update spans with random agents and their icons for enemy team
+
     await displayAgentInfo('results-agent-enemy', randomAgents[0]);
     await displayAgentInfo('results-agent2-enemy', randomAgents[1]);
     await displayAgentInfo('results-agent3-enemy', randomAgents[2]);
