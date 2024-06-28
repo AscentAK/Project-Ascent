@@ -56,19 +56,48 @@ async function battlePage(teamSection) {
 
     document.querySelector('#defenders').textContent = 'Defending'
 
-    const span = document.getElementById("results-agent")
-    const span2 = document.getElementById("results-agent2")
-    const span3 = document.getElementById("results-agent3")
-    const span4 = document.getElementById("results-agent4")
-    const span5 = document.getElementById("results-agent5")
+    const displayAgentInfo = async (spanId, agentName) => {
+      const span = document.getElementById(spanId);
+      const agent = agents.find(a => a.name === agentName);
+      if (agent) {
+        // Clear existing icon
+        span.innerHTML = '';
 
-    span.textContent = formValues['agents-1']
-    span2.textContent = formValues['agents-2']
-    span3.textContent = formValues['agents-3']
-    span4.textContent = formValues['agents-4']
-    span5.textContent = formValues['agents-5']
+        const nameSpan = document.createElement('span');
+        nameSpan.textContent = agent.name;
+        nameSpan.style.marginRight = '5px';
+        span.appendChild(nameSpan);
+
+        const icon = document.createElement('img');
+        icon.src = agent.icon;
+        icon.alt = `${agent.name} icon`;
+        icon.style.width = '50px';
+        icon.style.height = 'auto';
+        span.appendChild(icon);
+      }
+    };
+
+    // Update spans with selected agents and their icons
+    await displayAgentInfo('results-agent', formValues['agents-1']);
+    await displayAgentInfo('results-agent2', formValues['agents-2']);
+    await displayAgentInfo('results-agent3', formValues['agents-3']);
+    await displayAgentInfo('results-agent4', formValues['agents-4']);
+    await displayAgentInfo('results-agent5', formValues['agents-5']);
 
     form.reset();
+    // const span = document.getElementById("results-agent")
+    // const span2 = document.getElementById("results-agent2")
+    // const span3 = document.getElementById("results-agent3")
+    // const span4 = document.getElementById("results-agent4")
+    // const span5 = document.getElementById("results-agent5")
+
+    // span.textContent = formValues['agents-1']
+    // span2.textContent = formValues['agents-2']
+    // span3.textContent = formValues['agents-3']
+    // span4.textContent = formValues['agents-4']
+    // span5.textContent = formValues['agents-5']
+
+    // form.reset();
 
   })
   document.getElementById('random-button').addEventListener('click', async () => {
@@ -93,11 +122,39 @@ async function battlePage(teamSection) {
     teamTwo(enemyTeamSection);
     document.getElementById('attackers').textContent = 'Attacking'
 
-    document.getElementById('results-agent-enemy').textContent = randomAgents[0];
-    document.getElementById('results-agent2-enemy').textContent = randomAgents[1];
-    document.getElementById('results-agent3-enemy').textContent = randomAgents[2];
-    document.getElementById('results-agent4-enemy').textContent = randomAgents[3];
-    document.getElementById('results-agent5-enemy').textContent = randomAgents[4];
+    const displayAgentInfo = async (spanId, agentName) => {
+      const span = document.getElementById(spanId);
+      const agent = agents.find(a => a.name === agentName);
+      if (agent) {
+        // Clear existing content
+        span.innerHTML = '';
+
+        const nameSpan = document.createElement('span');
+        nameSpan.textContent = agent.name;
+        nameSpan.style.marginRight = '5px';
+        span.appendChild(nameSpan);
+
+        const icon = document.createElement('img');
+        icon.src = agent.icon;
+        icon.alt = `${agent.name} icon`;
+        icon.style.width = '50px';
+        icon.style.height = 'auto';
+        span.appendChild(icon);
+      }
+    };
+
+    // Update spans with random agents and their icons for enemy team
+    await displayAgentInfo('results-agent-enemy', randomAgents[0]);
+    await displayAgentInfo('results-agent2-enemy', randomAgents[1]);
+    await displayAgentInfo('results-agent3-enemy', randomAgents[2]);
+    await displayAgentInfo('results-agent4-enemy', randomAgents[3]);
+    await displayAgentInfo('results-agent5-enemy', randomAgents[4]);
+
+    // document.getElementById('results-agent-enemy').textContent = randomAgents[0];
+    // document.getElementById('results-agent2-enemy').textContent = randomAgents[1];
+    // document.getElementById('results-agent3-enemy').textContent = randomAgents[2];
+    // document.getElementById('results-agent4-enemy').textContent = randomAgents[3];
+    // document.getElementById('results-agent5-enemy').textContent = randomAgents[4];
   });
 }
 
